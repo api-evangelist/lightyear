@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.lightyear.com/.well-known/oauth-authorization-server
+notes: >-
+  Lightyear publishes no public developer API and no developer authentication documentation. The
+  only machine-readable auth surface found is the RFC 8414 OAuth 2.0 authorization server metadata
+  served from api.lightyear.com, which describes an OAuth 2.0 authorization-code + PKCE flow scoped
+  to an internal MCP integration. It is captured here as observed fact, not as a documented public
+  auth contract for third-party developers.
+summary:
+  types:
+  - oauth2
+  api_key_in: []
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: internal-mcp
+  type: oauth2
+  issuer: https://api.lightyear.com
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.lightyear.com/oauth2/internal-mcp/authorize
+    tokenUrl: https://api.lightyear.com/oauth2/internal-mcp/token
+    refresh: true
+    pkce_methods:
+    - S256
+    scopes:
+    - mcp
+  dynamic_client_registration:
+    supported: true
+    standard: RFC 7591
+    registration_endpoint: https://api.lightyear.com/oauth2/internal-mcp/register
+  token_endpoint_auth_methods:
+  - client_secret_post
+  - none
+  jwks_uri: https://api.lightyear.com/.well-known/jwks.json
+  sources:
+  - well-known/lightyear-oauth-authorization-server.json
