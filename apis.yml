@@ -1,21 +1,53 @@
 aid: lightyear
 name: Lightyear
-description: Lightyear is a company surfaced as a portfolio company of 500-global, lightspeed-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: Lightyear is a European retail investing platform founded by former Wise (TransferWise) employees
+  Martin Sokk and Mihkel Aamer, offering commission-light access to roughly 6,000 stocks, ETFs, money
+  market funds, bonds and crypto, plus interest-bearing cash "Vaults" managed with BlackRock and J.P.
+  Morgan money market funds. The service runs through mobile apps (iOS and Android) and a web app, with
+  a separate Lightyear for Business offering. Lightyear UK Ltd is authorised by the UK Financial Conduct
+  Authority (FRN 987226) and Lightyear Europe AS is regulated by the Estonian Financial Supervision Authority,
+  with operations in London and Tallinn. Lightyear does not publish a public developer API or developer
+  portal; its api.lightyear.com host serves the first-party apps and publishes an RFC 8414 OAuth 2.0 authorization
+  server metadata document for an internal MCP scope.
 url: https://raw.githubusercontent.com/api-evangelist/lightyear/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://lightyear.com/cms/OG_Default_EN_7a4714f5fe.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
 - lightspeed-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-identity-note: The originating VC-portfolio stub carried https://lightyear.io, which does not resolve
+  to a Lightyear property (parked on Netlify, certificate mismatch, HTTP 404 as of 2026-07-19). The company
+  was re-identified as Lightyear (lightyear.com, formerly golightyear.com — the Android package is still
+  com.golightyear.mobile), whose /en-eu/about page names Lightspeed Venture Partners (Nicole Quinn) as
+  an investor, matching the portfolio signal.
+x-tier: profiled
+x-tier-reason: no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Financial Services
+- Investing
+- Brokerage
+- Stocks
+- ETFs
+- Fintech
+- Wealth Management
+- Europe
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +55,64 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/lightyear-domain-security.yml
 - type: Website
-  url: https://lightyear.io
+  url: https://lightyear.com
+- type: About
+  url: https://lightyear.com/en-eu/about
+- type: Pricing
+  url: https://lightyear.com/en-eu/pricing
+- type: SignUp
+  url: https://lightyear.com/en-eu/signup
+- type: Login
+  url: https://lightyear.com/en-eu/login
+- type: Blog
+  url: https://lightyear.com/en-eu/blog
+- type: Support
+  url: https://lightyear.com/en-eu/help
+- type: HelpCenter
+  url: https://lightyear.com/en-eu/help
+- type: TermsOfService
+  url: https://lightyear.com/en-eu/terms
+- type: PrivacyPolicy
+  url: https://lightyear.com/en-eu/privacy
+- type: CookiePolicy
+  url: https://lightyear.com/en-eu/cookie-policy
+- type: Disclosures
+  url: https://lightyear.com/en-eu/disclosures
+- type: Accessibility
+  url: https://lightyear.com/en-eu/accessibility-statement
+- type: StatusPage
+  url: https://status.lightyear.com/
+- type: Careers
+  url: https://careers.lightyear.com/
+- type: Twitter
+  url: https://twitter.com/go_lightyear
+- type: iOSApp
+  url: https://apps.apple.com/gb/app/lightyear-investing/id1562105616
+- type: AndroidApp
+  url: https://play.google.com/store/apps/details?id=com.golightyear.mobile
+- type: WellKnown
+  url: well-known/lightyear-well-known.yml
+- type: Authentication
+  url: authentication/lightyear-authentication.yml
+- type: OAuthScopes
+  url: scopes/lightyear-scopes.yml
+- type: Lifecycle
+  url: lifecycle/lightyear-lifecycle.yml
+- type: ChangeLog
+  url: https://lightyear.com/en-eu/blog/product-updates
+- type: ChangeLog
+  url: changelog/lightyear-changelog.yml
+- type: Conformance
+  url: conformance/lightyear-conformance.yml
+- type: Compliance
+  url: https://lightyear.com/en-eu/disclosures
+- type: LLMsTxt
+  url: llms/lightyear-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
