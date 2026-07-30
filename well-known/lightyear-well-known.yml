@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of https://lightyear.com and https://api.lightyear.com
+notes: >-
+  api.lightyear.com sits behind an AWS ALB that returns HTTP 403 for every path except the
+  /.well-known/ documents listed below, so 403 here means "blocked by the edge", not "absent".
+hosts:
+- host: https://lightyear.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.lightyear.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: lightyear-oauth-authorization-server.json
+    standard: RFC 8414
+  - path: /.well-known/jwks.json
+    status: 200
+    standard: RFC 7517
+    note: public JWKS referenced by the authorization server metadata; not mirrored here
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403

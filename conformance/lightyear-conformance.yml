@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://lightyear.com/en-eu/about + https://api.lightyear.com/.well-known/oauth-authorization-server
+notes: >-
+  Lightyear ships no public API, so most API-level cross-cutting standards are not applicable.
+  What is assertable is (a) the OAuth surface advertised by the authorization server metadata on
+  api.lightyear.com and (b) the financial-services authorisations Lightyear publishes on its own
+  site. No SOC 2 / ISO 27001 / PCI DSS certification claims and no trust center were found.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: RFC 8414 authorization server metadata advertises authorization_code + refresh_token grants
+- id: rfc8414-authorization-server-metadata
+  conforms: true
+  evidence: https://api.lightyear.com/.well-known/oauth-authorization-server returned HTTP 200
+- id: rfc7636-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256]
+- id: rfc7591-dynamic-client-registration
+  conforms: true
+  evidence: registration_endpoint published at /oauth2/internal-mcp/register
+- id: rfc7517-jwks
+  conforms: true
+  evidence: jwks_uri https://api.lightyear.com/.well-known/jwks.json returned HTTP 200
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned HTTP 404 on both lightyear.com and api.lightyear.com
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned HTTP 404 on lightyear.com
+- id: rfc9727-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returned HTTP 404 on lightyear.com
+regulatory:
+- id: fca-authorised
+  jurisdiction: United Kingdom
+  conforms: true
+  evidence: >-
+    Lightyear UK Ltd is authorised and regulated by the Financial Conduct Authority, FRN 987226,
+    as published on lightyear.com
+- id: estonian-fsa-regulated
+  jurisdiction: Estonia / EU
+  conforms: true
+  evidence: >-
+    Lightyear Europe AS is regulated by the Estonian Financial Supervision Authority (Finantsinspektsioon),
+    as published on lightyear.com
+- id: investor-compensation-scheme
+  jurisdiction: EU
+  conforms: true
+  evidence: published investor compensation coverage of up to EUR 20,000 on lightyear.com
+disclosures: https://lightyear.com/en-eu/disclosures

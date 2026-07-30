@@ -1,0 +1,50 @@
+# Lightyear
+
+> Lightyear is a European retail investing platform (Lightyear UK Ltd, FCA FRN 987226; Lightyear Europe AS, regulated by the Estonian Financial Supervision Authority) offering roughly 6,000 stocks, ETFs, money market funds, bonds and crypto, plus interest-bearing cash Vaults, through mobile and web apps. Lightyear publishes no public developer API, developer portal, SDKs or API documentation as of 2026-07-19.
+
+## Product
+
+- [Stocks](https://lightyear.com/en-eu/stocks): Stock and ETF investing, including fractional shares.
+- [Funds](https://lightyear.com/en-eu/funds): Money market funds and ETFs from providers including BlackRock/iShares, Vanguard, Amundi, Invesco, SPDR and VanEck.
+- [Vaults](https://lightyear.com/en-eu/vaults): Interest-bearing cash product built on money market funds.
+- [Plans](https://lightyear.com/en-eu/plans): Ready-made and automated investment plans.
+- [Tools](https://lightyear.com/en-eu/tools): Screeners, watchlists and analysis tooling.
+- [Lightyear AI](https://lightyear.com/en-eu/lightyear-ai): AI-generated market intelligence features (Lightning updates, "Why did it move?", Bulls Say / Bears Say).
+- [Lightyear for Business](https://lightyear.com/en-eu/business): Business investing accounts.
+
+## Company
+
+- [About](https://lightyear.com/en-eu/about): Founded by Martin Sokk and Mihkel Aamer, former Wise employees; London and Tallinn.
+- [Blog](https://lightyear.com/en-eu/blog): Product updates, market news, learning library, building Lightyear.
+- [Product updates](https://lightyear.com/en-eu/blog/product-updates): Dated product changelog.
+- [Pricing](https://lightyear.com/en-eu/pricing)
+- [Help Centre](https://lightyear.com/en-eu/help)
+- [Careers](https://careers.lightyear.com/)
+- [Status](https://status.lightyear.com/): Atlassian Statuspage covering Web, Mobile, System and Orders.
+
+## Legal and regulatory
+
+- [Terms](https://lightyear.com/en-eu/terms)
+- [Privacy](https://lightyear.com/en-eu/privacy)
+- [Cookie policy](https://lightyear.com/en-eu/cookie-policy)
+- [Disclosures](https://lightyear.com/en-eu/disclosures)
+- [Risk disclosures](https://lightyear.com/en-eu/risk-disclosures)
+- [Best execution](https://lightyear.com/en-eu/best-execution)
+- [Important information](https://lightyear.com/en-eu/important-information)
+- [Accessibility statement](https://lightyear.com/en-eu/accessibility-statement)
+
+## Apps
+
+- [iOS](https://apps.apple.com/gb/app/lightyear-investing/id1562105616)
+- [Android](https://play.google.com/store/apps/details?id=com.golightyear.mobile)
+
+## Machine-readable surfaces
+
+- [OAuth 2.0 authorization server metadata](https://api.lightyear.com/.well-known/oauth-authorization-server): RFC 8414 document on api.lightyear.com advertising an authorization_code + PKCE (S256) flow, dynamic client registration, and a single `mcp` scope for an internal MCP integration. Not documented for third-party use.
+- [JWKS](https://api.lightyear.com/.well-known/jwks.json)
+- [Status API](https://status.lightyear.com/api/v2/summary.json): Statuspage summary JSON.
+
+## Notes for agents
+
+- There is no public Lightyear API, no API keys, no SDKs and no MCP server available to third parties. Do not attempt to call api.lightyear.com; every path other than the /.well-known/ documents above returns HTTP 403 from the edge.
+- Lightyear is a regulated broker in the UK and EU; investing content is subject to risk disclosures.

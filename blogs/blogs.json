@@ -1,0 +1,14 @@
+{
+  "repo": "lightyear",
+  "feeds": [
+    {
+      "source": "https://lightyear.com/en-eu/login",
+      "feed_url": "https://lightyear.com/en-eu/login",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

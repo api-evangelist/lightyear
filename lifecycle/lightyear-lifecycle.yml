@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.lightyear.com/ + https://lightyear.com/en-eu/blog/product-updates
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: >-
+    Lightyear publishes no public API and therefore no API versioning policy. Product versioning is
+    communicated through the "Product updates" blog category (see changelog/lightyear-changelog.yml).
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: no published deprecation or sunset policy was found
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.lightyear.com/
+status_page_details:
+  provider: Atlassian Statuspage
+  machine_readable:
+  - https://status.lightyear.com/api/v2/summary.json
+  - https://status.lightyear.com/api/v2/status.json
+  history: https://status.lightyear.com/history
+  components:
+  - Web
+  - Mobile
+  - System
+  - Orders
+  subscribe: true
+deprecated_operations: []

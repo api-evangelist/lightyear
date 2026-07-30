@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+status: not-public
+source: https://api.lightyear.com/.well-known/oauth-authorization-server
+notes: >-
+  No official, documented, publicly connectable Lightyear MCP server was found: there is no
+  mcp.lightyear.com host (NXDOMAIN), no developer documentation, and no registry listing. What was
+  found is indirect but real evidence that Lightyear operates an MCP integration behind its own
+  authorization server — the RFC 8414 metadata at api.lightyear.com advertises an "mcp" scope and
+  authorize/token/register endpoints under /oauth2/internal-mcp/. The path name ("internal-mcp")
+  and the absence of any published endpoint indicate this is an internal/first-party surface.
+  Recorded for tracking only. No `MCPServer` pointer is wired into apis.yml, because no MCP server
+  is publicly available to consumers. Re-check on the next enrichment round.
+evidence:
+- source: https://api.lightyear.com/.well-known/oauth-authorization-server
+  status: 200
+  observed:
+    scopes_supported:
+    - mcp
+    authorization_endpoint: https://api.lightyear.com/oauth2/internal-mcp/authorize
+    registration_endpoint: https://api.lightyear.com/oauth2/internal-mcp/register
+- source: https://api.lightyear.com/mcp
+  status: 403
+  observed: generic awselb/2.0 403 returned for every path on this host, so existence is unconfirmed
+- source: https://mcp.lightyear.com/
+  status: null
+  observed: DNS does not resolve
+server: null
+tools: []

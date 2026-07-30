@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.lightyear.com/.well-known/oauth-authorization-server
+docs: null
+notes: >-
+  Lightyear publishes no scopes/permissions reference page. The single scope below is the only one
+  advertised in the RFC 8414 authorization server metadata (scopes_supported), for an internal MCP
+  integration. No scope descriptions are published by the provider.
+schemes:
+- name: internal-mcp
+  source: well-known/lightyear-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.lightyear.com/oauth2/internal-mcp/authorize
+    tokenUrl: https://api.lightyear.com/oauth2/internal-mcp/token
+scopes:
+- scope: mcp
+  description: null
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/lightyear-oauth-authorization-server.json

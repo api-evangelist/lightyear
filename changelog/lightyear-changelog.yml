@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://lightyear.com/en-eu/blog/product-updates
+scheme: dated-product-updates
+notes: >-
+  Lightyear has no API changelog or release notes (no public API). Product change is published as a
+  dated "Product updates" blog category, which functions as the product changelog. Recent window
+  only — the live page remains the source of truth.
+current_version: null
+entries:
+- date: '2026-06-21'
+  title: 'Summer product update: the Q2 features you might have missed'
+  url: https://lightyear.com/en-eu/blog/summer-product-update
+  breaking: false
+- date: '2026-05-12'
+  title: Introducing crypto on Lightyear
+  url: https://lightyear.com/en-eu/blog/crypto-on-lightyear
+  breaking: false
+- date: '2025-11-05'
+  title: Investing with a Plan is now live on Lightyear
+  url: https://lightyear.com/en-eu/blog/investing-with-a-plan
+  breaking: false
+- date: '2025-07-29'
+  title: 1,000 new European instruments
+  url: https://lightyear.com/en-eu/blog/1000-new-european-instruments
+  breaking: false
+- date: '2025-07-27'
+  title: AI-powered market intelligence for every investor
+  url: https://lightyear.com/en-eu/blog/ai-powered-market-intelligence-for-every-investor
+  breaking: false
+- date: '2025-07-16'
+  title: Lightyear broadens instrument universe and upgrades infrastructure with Tradegate,
+    Nasdaq CSD and Clearstream
+  url: https://lightyear.com/en-eu/blog/tradegate-nasdaq-csd-clearstream-integration
+  breaking: false
+- date: '2025-07-09'
+  title: Fractional investing for EU stocks and ETFs has landed
+  url: https://lightyear.com/en-eu/blog/fractional-investing-for-eu-stocks-and-etfs-has-landed
+  breaking: false
+- date: '2025-02-28'
+  title: 'Lightning Updates: now powered by Lightyear AI'
+  url: https://lightyear.com/en-eu/blog/lightning-updates-now-powered-by-lightyear-ai
+  breaking: false
