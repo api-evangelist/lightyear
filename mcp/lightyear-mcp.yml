@@ -1,6 +1,7 @@
 generated: '2026-07-19'
 method: searched
-status: not-public
+status: gated
+status_raw: not-public
 source: https://api.lightyear.com/.well-known/oauth-authorization-server
 notes: >-
   No official, documented, publicly connectable Lightyear MCP server was found: there is no
