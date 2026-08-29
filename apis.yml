@@ -10,6 +10,17 @@ description: Lightyear is a European retail investing platform founded by former
   portal; its api.lightyear.com host serves the first-party apps and publishes an RFC 8414 OAuth 2.0 authorization
   server metadata document for an internal MCP scope.
 url: https://raw.githubusercontent.com/api-evangelist/lightyear/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
