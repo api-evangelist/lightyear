@@ -51,7 +51,7 @@ created: '2026-07-17'
 modified: '2026-07-19'
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Investing
 - Brokerage
 - Stocks
@@ -69,6 +69,7 @@ tags_raw:
 - Fintech
 - Wealth Management
 - Europe
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
