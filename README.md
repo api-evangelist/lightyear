@@ -64,26 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lightyear is a European retail investing platform founded by former Wise (TransferWise) employees Martin Sokk and Mihkel Aamer, offering commission-light access to roughly 6,000 stocks, ETFs, money market funds, bonds and crypto, plus interest-bearing cash "Vaults" managed with BlackRock and J.P. Morgan money market funds. Lightyear UK Ltd is authorised by the UK Financial Conduct Authority (FRN 987226) and Lightyear Europe AS is regulated by the Estonian Financial Supervision Authority, with operations in London and Tallinn.
+Lightyear is a European retail investing platform founded by former Wise (TransferWise) employees Martin Sokk and Mihkel Aamer, offering commission-light access to roughly 6,000 stocks, ETFs, money market funds, bonds and crypto, plus interest-bearing cash "Vaults" managed with BlackRock and J.P. Morgan money market funds. The service runs through mobile apps (iOS and Android) and a web app, with a separate Lightyear for Business offering. Lightyear UK Ltd is authorised by the UK Financial Conduct Authority (FRN 987226) and Lightyear Europe AS is regulated by the Estonian Financial Supervision Authority, with operations in London and Tallinn. Lightyear does not publish a public developer API or developer portal; its api.lightyear.com host serves the first-party apps and publishes an RFC 8414 OAuth 2.0 authorization server metadata document for an internal MCP scope.
 
-Website: https://lightyear.com — Status: https://status.lightyear.com/ — Backed by: 500-global, lightspeed-venture-partners
+**Areas:** Company · Financial Services · Investing · Brokerage · Stocks · ETFs · Fintech · Wealth Management · Europe
 
-## API surface
+## Lightyear on APIs.io
 
-Lightyear publishes **no public developer API**, developer portal, API documentation or SDKs. `api.lightyear.com` serves the first-party mobile and web apps and returns HTTP 403 from the edge for every path except its `/.well-known/` documents — one of which is a real RFC 8414 OAuth 2.0 authorization server metadata document advertising an `mcp` scope for an internal MCP integration (captured in `well-known/`, `authentication/`, `scopes/` and `mcp/`).
+Everything profiled for Lightyear is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lightyear/](https://apis.io/providers/lightyear/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts
+### Published properties
 
-| Dir | File | Method |
-|---|---|---|
-| `well-known/` | `lightyear-well-known.yml`, `lightyear-oauth-authorization-server.json` | searched |
-| `authentication/` | `lightyear-authentication.yml` | searched |
-| `scopes/` | `lightyear-scopes.yml` | searched |
-| `mcp/` | `lightyear-mcp.yml` (status: not-public) | searched |
-| `lifecycle/` | `lightyear-lifecycle.yml` | searched |
-| `changelog/` | `lightyear-changelog.yml` | searched |
-| `conformance/` | `lightyear-conformance.yml` | searched |
-| `security/` | `lightyear-domain-security.yml` | probed |
-| `llms/` | `lightyear-llms.txt` | generated |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-> Identity note: the originating VC-portfolio stub carried `https://lightyear.io`, which does not resolve to a Lightyear property (parked on Netlify, certificate mismatch, HTTP 404 as of 2026-07-19). The company was re-identified as lightyear.com (formerly golightyear.com; the Android package is still `com.golightyear.mobile`), whose About page names Lightspeed Venture Partners as an investor — matching the portfolio signal.
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [lightyear-mcp.yml](https://apis.io/servers/lightyear/lightyear-mcp-yml/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lightyear Authentication](https://apis.io/security/lightyear/lightyear-authentication/)
+- [Lightyear Domain Security](https://apis.io/security/lightyear/lightyear-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Lightyear Scopes](https://apis.io/scopes/lightyear/lightyear-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lightyear.com)
+- [Pricing](https://lightyear.com/en-eu/pricing)
+- [Sign up](https://lightyear.com/en-eu/signup)
+- [Support](https://lightyear.com/en-eu/help)
+- [Changelog](https://lightyear.com/en-eu/blog/product-updates)
+- [Blog](https://lightyear.com/en-eu/blog)
+- [Compliance](https://lightyear.com/en-eu/disclosures)
+- [Terms of service](https://lightyear.com/en-eu/terms)
+- [Privacy policy](https://lightyear.com/en-eu/privacy)
+- [Status](https://status.lightyear.com/)
+
+## API Evangelist rating
+
+**Kin Score 28.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 31.6 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 52.6 |
+
+**Agent readiness 18.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 37.0** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lightyear/](https://apis.io/providers/lightyear/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lightyear: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lightyear/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
